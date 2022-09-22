@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@600;700&display=swap');
+:root {
+    --text-font: 'Open Sans', sans-serif;
+    --header-font: 'Anek Latin', sans-serif;
+    --main-color: #0746bd;
+    --alt-color: #0d50a3;
+    --main-blue-color: #6666ff;
+    --alt-blue-color: #216dcf;
+    --main-green-color: #3acc1d;
+    --alt-green-color: #34b11b;
+    --main-text-color: #dadee3;
+    --alt-text-color: #e2dede;
+    --l-text-color: #d4d1d1;
+    --lx-text-color: #cfcfcf;
+    --vlx-text-color: #bbbbbb;
+    --ulx--text-color: #999999;
+    --main-theme-color: #0f0f0f;
+    --alt-theme-color: #1b1b1b;
+    --l-theme-color: #262626;
+    --lx-theme-color: #303030;
+    --vlx-theme-color: #3f3f3f;
+    --ulx--theme-color: #444444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--main-text-color);
+    box-sizing: border-box;
+    font-family: var(--text-font);
+    list-style: none;
+    text-decoration: none;
+}
+
+.anime-card {
+    width: 180px;
+    background-color: #1b1b1b;
+    /* overflow-x: hidden; */
+    padding: 12px;
+}
+
+#ac-ep-poster {
+    background-image: url(../test.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: var(180px - 24px);
+    height: 200px;
+}
+
+span {
+    background-color: #303030;
+    padding: 2px 4px;
+    border-radius: 6px;
+    font-size: small;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+#ac-ep-rating {
+    position: absolute;
+    top: 7px;
+}
+
+#ac-ep-type {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+
+#ac-ep-lang {
+    position: absolute;
+    bottom: 7px;
+}
+
+#ac-ep-eplist {
+    position: absolute;
+    top: 7px;
+}

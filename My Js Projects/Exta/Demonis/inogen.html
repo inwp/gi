@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+#titon{
+background-color: rgb(78, 15, 129);
+border: none;
+color: white;
+border-radius: 50%;
+padding: 1px 5px;
+cursor: pointer;
+font-size: 30px;
+font-weight: bolder;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#titon:hover{
+background-color: rgb(57, 70, 182);
+}
+</style>
+<!-- <button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button> -->
+
+	<!-- Required tag for download button -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .btnioio {border-radius: 25px; background-color: DodgerBlue; border: none; color: white; padding: 12px 30px; cursor: pointer; font-size: 20px;}
+    .btnioio:hover {background-color: green;}
+    </style>
+
+    <!-- <button class="btnioio"><i class="fa fa-download"></i> Download</button> -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Download - Books</title>
+	<meta name="robots" content="noindex, noflow">
+	<link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+	<style>
+*{margin:0;padding:0;}
+body{font-family: 'Slabo 27px', serif;background:#000;}
+.bg{position:relative;z-index:1;}
+.bg img{display: block; width:100%; height:100%;}
+.bg h1{position: absolute; top:23%; left:0; width:100%; font-size:100px; text-align:center;}
+.cont{position:relative; z-index:2; background:rgba(0,0,0,0.9); font-size:27px; color:#fff; padding:5%;}
+.cont *{max-width:900px; margin:5% auto;}
+#download{text-align:center}
+
+</style>
+<script type="text/javascript">
+$( document ).ready(function() {
+var $window = $(window);
+function scroll_elements(){
+  var scroll = $window.scrollTop();
+  var scrollLayer1 = scroll/1.4;
+  var scrollLayer2 = scroll/1.2;
+
+  $(".layer1").css(
+    "-webkit-transform","translate3d(0," +  scrollLayer1  + "px,0)",
+            "transform","translate3d(0," +  scrollLayer1  + "px,0)"
+  );
+  $(".layer2").css(
+    "-webkit-transform","translate3d(0," +  scrollLayer2  + "px,0)",
+            "transform","translate3d(0," +  scrollLayer2  + "px,0)"
+  );
+}
+
+$window.scroll(scroll_elements);
+});
+</script>
+</head>
+<body>
+	<div id="wrap">
+  <div class="bg">
+    <img class="layer2" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" src="https://hdwallpapersforandroid.files.wordpress.com/2013/11/windows-nature-android-landscape-hd-city-109835.jpg" alt="" />
+    <h1 style="color: #33adff/*rgba(3, 32, 252, 0.9);*/" class="layer1">Welcome</h1>
+
+  </div>
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  /*border: 1px solid #ddd;*/
+  border: none;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #000000;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #101010;
+  color: yellowgreen;
+}
+</style>
+
+<br>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for books names.." autocomplete="off" title="Type in a ebook name" auto>
+
+<ul id="myUL">
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The Art of saying no</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;No more Mr nice guy</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The Phycology Influence of Persuasion</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The power of Now</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Think like a monk</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Think and grow rich</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The art of war</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The law of human nature</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Mastery</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Can,t hurt me</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The art of eduction</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Rich dad poor dad</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Dare to lead</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Better small talk</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Read people like a book</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;How to talk with anyone</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Surrounded by iditos</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Phychology in bite sized chunks</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The power os us</a></li>
+<li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The righteous mind</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+  <div class="cont">
+    <p></p>
+	<div id="download"><button class="btnioio"><i class="fa fa-download"></i> Download</button></div>
+	<p>Fusce faucibus nulla id iaculis sagittis. Duis ac arcu a ex elementum feugiat. Proin ut quam quis tortor vulputate semper a id nunc. Morbi rhoncus ultricies ultricies. Praesent semper id massa sed euismod. Fusce sagittis felis nec libero malesuada, in luctus enim aliquam. Aliquam sagittis, orci eget blandit vestibulum, mi dui blandit mauris, et tincidunt tellus nisi sagittis lacus. Sed dignissim, sapien vitae cursus imperdiet, augue massa tempor ex, non finibus risus metus ac enim. Mauris blandit eros nisi.</p>
+    <div id="download"><button class="btnioio"><i class="fa fa-download"></i> Download</button></div>
+    <p>Sed bibendum ante ac metus hendrerit, nec commodo tortor venenatis. Pellentesque porta eros non eros cursus, vitae commodo sapien facilisis. Praesent sit amet volutpat lacus. Nullam sed quam ac dolor blandit lacinia. Ut euismod turpis sit amet libero pulvinar, non aliquet lacus bibendum. Nullam libero massa, facilisis sed neque id, porta fringilla eros. Curabitur vestibulum nisi nec tempor tempor. Sed fermentum mauris diam, eu volutpat magna tempus et. Ut semper dapibus purus eget ullamcorper. Aenean varius rutrum purus id congue. Mauris sit amet turpis ornare, pharetra ex et, porta lorem. In hac habitasse platea dictumst.</p>
+    <div id="download"><button class="btnioio"><i class="fa fa-download"></i> Download</button></div>
+    <p>Nulla sed pellentesque nibh, eu consectetur neque. Curabitur eu risus at felis sagittis blandit. Nunc non massa non massa mattis semper. Curabitur dapibus tortor velit, id tincidunt ligula rutrum sed. Quisque feugiat consequat molestie. Curabitur lobortis neque ac porta imperdiet. Sed malesuada nibh sit amet magna commodo, sed bibendum turpis vestibulum. Suspendisse vel rutrum dolor, sed bibendum turpis. Morbi condimentum fermentum urna id venenatis.</p>
+  </div>
+</div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .openBtn {
+        display: flex;
+        justify-content: left;
+      }
+      .openButton {
+        border: none;
+        border-radius: 5px;
+        background-color: #1c87c9;
+        color: white;
+        padding: 14px 20px;
+        cursor: pointer;
+        position: fixed;
+      }
+      .loginPopup {
+      background: res;
+        position: relative;
+        text-align: center;
+        width: 100%;
+      }
+      .formPopup {
+        display: none;
+        position: fixed;
+        left: 45%;
+        top: 5%;
+        transform: translate(-50%, 5%);
+        border: 3px solid #999999;
+        z-index: 9;
+        border-radius: 12px;
+      }
+      .formContainer {
+        max-width: 300px;
+        padding: 20px;
+        background-color: #fff;
+      }
+      .formContainer input[type=text],
+      .formContainer input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 20px 0;
+        border: none;
+        background: #eee;
+      }
+      .formContainer input[type=text]:focus,
+      .formContainer input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      .formContainer .btn {
+        padding: 12px 20px;
+        border: none;
+        background-color: #8ebf42;
+        color: #fff;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 15px;
+        opacity: 0.8;
+      }
+      .formContainer .cancel {
+        background-color: #cc0000;
+      }
+      .formContainer .btn:hover,
+      .openButton:hover {
+        opacity: 1;
+      }
+    </style>
+    <div id="class">
+      <div class="openBtn">
+          <button class="openButton" onclick="opentime()"><strong>Open Form</strong></button>
+      </div>
+        <div class="loginPopup">
+            <div class="formPopup" id="popupForm">
+              <form action="/action_page.php" class="formContainer">
+               <h2>Please Log in</h2>
+               <label for="email">
+                 <strong>E-mail</strong>
+                </label>
+                <input type="text" id="email" placeholder="Your Email" name="email" required>
+                <label for="psw">
+              <strong>Password</strong>
+            </label>
+            <input type="password" id="psw" placeholder="Your Password" name="psw" required>
+          <button type="submit" class="btn">Log in and download</button>
+          <button class="btn" onclick="inogen()">Create account</a></button>
+          <button type="button" class="btn cancel" onclick="closetime()">Close</button>
+        </form>
+      </div>
+      </div>
+      </div>
+      <style>
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', sans-serif;
+  min-height: 100vh;
+}
+a,
+a:link {
+  font-family: inherit;
+  text-decoration: none;
+}
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.container:target {
+  display: flex;
+}
+.modal {
+  width: 60rem;
+  padding: 4rem 2rem;
+  border-radius: .8rem;
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(to right bottom, #009FFF, #ec2F4B);
+  box-shadow: .4rem .4rem 2.4rem .2rem hsla(236, 50%, 50%, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.details {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid hsla(0, 0%, 100%, .4);
+}
+.title {
+  font-size: 3.2rem;
+}
+.description {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  font-style: italic;
+}
+.txt {
+  padding: 0 4rem;
+  margin-bottom: 4rem;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+.txt::before {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid hsla(0, 0%, 100%, .2);
+  border-radius: 100rem;
+  pointer-events: none;
+}
+.btn {
+  padding: 1rem 1.6rem;
+  border: 1px solid hsla(0, 0%, 100%, .4);
+  border-radius: 100rem;
+  color: inherit;
+  background: transparent;
+  font-size: 1.4rem;
+  font-family: inherit;
+  letter-spacing: .2rem;
+  transition: .2s;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  border-color: hsla(0, 0%, 100%, .6);
+  -webkit-transform: translateY(-.2rem);
+          transform: translateY(-.2rem);
+}
+.link-1 {
+  font-size: 1.8rem;
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(to right bottom, #009FFF, #ec2F4B);
+  box-shadow: .4rem .4rem 2.4rem .2rem hsla(236, 50%, 50%, 0.3);
+  border-radius: 100rem;
+  padding: 1.4rem 3.2rem;
+  transition: .2s;
+}
+.link-1:hover,
+.link-1:focus {
+  -webkit-transform: translateY(-.2rem);
+          transform: translateY(-.2rem);
+  box-shadow: 0 0 4.4rem .2rem hsla(236, 50%, 50%, 0.4);
+}
+.link-2 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid hsla(0, 0%, 100%, .4);
+  border-radius: 100rem;
+  color: inherit;
+  font-size: 2.2rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .2s;
+}
+.link-2::before {
+  content: '×';
+  -webkit-transform: translateY(-.1rem);
+          transform: translateY(-.1rem);
+}
+.link-2:hover,
+.link-2:focus {
+  border-color: hsla(0, 0%, 100%, .6);
+  -webkit-transform: translateY(-.2rem);
+          transform: translateY(-.2rem);
+}
+</style>
+<div id="inogen">
+<a href="#modal-opened" class="link-1"  id="modal-closed">Create new account</a>
+<a onclick="close()" href="" class="link-1"  id="modal-closed">close</a></button>
+<div class="container" id="modal-opened">
+  <div class="modal">
+    <div class="details">
+      <h1 class="title">Your Title</h1>
+      <p class="description">Slogan will be here at this place.</p>
+    </div>
+    <p class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex dicta maiores libero minus obcaecati iste optio, eius labore repellendus.</p>
+
+    <button class="btn">Button</button>
+
+    <a href="#modal-closed" class="link-2"></a>
+
+   </div>
+   </div>
+</div>
+    </div>
+    <script>
+    document.getElementById("inogen").style.display = "none";
+      function opentime() {
+        document.getElementById("popupForm").style.display = "block";
+      }
+      function closetime() {
+        document.getElementById("popupForm").style.display = "none";
+      }
+      function inogen() {
+        document.getElementById("popupForm").style.display = "none";
+        document.getElementById("inogen").style.display = "block";
+        document.getElementById("class").style.display = "none";
+      }
+      function close() {
+        document.getElementById("inogen").style.display = "none";
+        document.getElementById("class").style.display = "none";
+  }
+</script>
+</body>
+</html>

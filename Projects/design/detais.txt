@@ -1,0 +1,46 @@
+rating
+name
+time
+episode
+genre
+type
+sub/dub
+date
+studio
+add to my list
+status
+
+
+
+Name
+rating
+episode
+type
+descriptiokn
+japanish names
+synonyms
+date aires
+status
+genres
+seasons
+Bookmark
+primiered
+broadcast
+producers
+studios
+source
+avg duration
+resolution
+type-audio
+More info
+trailer
+age
+director
+fandom
+reporte a problem
+new estimated
+theme
+primiered
+score
+views
+tage

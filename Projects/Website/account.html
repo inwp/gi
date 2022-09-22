@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+     :root {
+        --text-font: 'Open Sans', sans-serif;
+        --header-font: 'Anek Latin', sans-serif;
+        --main-color: #044bcd;
+        --alt-color: #0a4996;
+        --main-blue-color: #6666ff;
+        --bright-blue-color: rgb(0, 62, 248);
+        --alt-blue-color: #216dcf;
+        --main-green-color: #3acc1d;
+        --alt-green-color: #34b11b;
+        --main-text-color: #f0f0f0;
+        --alt-text-color: #e0e0e0;
+        --l-text-color: #e4e4e4;
+        --lx-text-color: #d4d4d4;
+        --vlx-text-color: #c8c8c8;
+        --ulx-text-color: #bbbbbb;
+        --main-theme-color: #0a0a0a;
+        --alt-hover-theme-color: #131313;
+        --alt-theme-color: #181818;
+        --l-theme-color: #202020;
+        --lx-theme-color: #282828;
+        --vlx-theme-color: #303030;
+        --ulx-theme-color: #383838;
+        --sucess-color: #08c456;
+        --sucess-hover-color: #149d4d;
+        --warning-color: #ffa200;
+        --warning-hover-color: #d68700;
+        --message-color: #1458c5;
+        --message-hover-color: #0f0fac;
+        --failed-color: #e51414;
+        --failed-hover-color: #b00d0d;
+    }
+    
+    * {
+        margin: 0;
+        scroll-behavior: smooth;
+        padding: 0;
+        text-decoration: none;
+        color: #ededed;
+        box-sizing: border-box;
+        border-style: none;
+        outline-style: none;
+        list-style: none;
+        font-family: 'Roboto', sans-serif;
+        /* filter: blur(0); */
+        font-weight: 500;
+        box-shadow: none;
+    }
+    
+    body {
+        background-color: var(--main-theme-color);
+    }
+    
+    .signinup a {
+        color: var(--main-color);
+    }
+    
+    .signinup {
+        position: fixed;
+        z-index: 60;
+        opacity: 0.97;
+        background-color: var(--main-text-color);
+        left: 50%;
+        top: -100%;
+        color: var(--main-theme-color);
+        transform: translate(-50%, -50%);
+        min-width: 25rem;
+        transition: top .5s;
+        border-radius: .75rem;
+    }
+    
+    .signinup .sign-content::after {
+        content: '';
+        width: 100%;
+        height: 6.07rem;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        background: linear-gradient(transparent, var(--main-text-color));
+        mix-blend-mode: lighten;
+    }
+    
+    .signinup .sign-content {
+        width: 100%;
+        z-index: 0;
+        height: 100%;
+        position: relative;
+        background-color: var(--main-text-color);
+        background: url('/assets/images/naruto.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 6rem;
+        color: var(--main-theme-color);
+        padding: .5rem 2.3rem 1rem;
+        transition: top .5s;
+        border-radius: .75rem;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .signinup .sign-content {
+            padding: .5rem 1rem 1rem;
+        }
+    }
+    
+    .account-check-box {
+        width: 100%;
+        height: 100%;
+        padding: .75rem;
+    }
+    
+    .groups {
+        line-height: 1.5;
+    }
+    
+    .groups .name {
+        margin-bottom: .3rem;
+        margin-top: .4rem;
+        text-transform: capitalize;
+        font-weight: 530;
+        font-size: 1.1rem;
+        color: var(--main-theme-color);
+    }
+    
+    .groups .items {
+        display: flex;
+        color: var(--main-theme-color);
+        width: 100%;
+        display: flex;
+        background-color: var(--lx-text-color);
+        border-radius: .5rem;
+        transition: .3s;
+        margin-bottom: 12px;
+        /* line-height: 2rem; */
+    }
+    
+    .groups .items i {
+        color: var(--main-color);
+        transition: .3s;
+        font-size: 1rem;
+        width: fit-content;
+        transition: .3s;
+        padding: .75rem;
+    }
+    
+    .groups input {
+        font-size: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, 0);
+        border-radius: .5rem;
+        color: var(--alt-color);
+        border-style: none;
+        font-weight: 500;
+        box-shadow: none;
+        outline: none;
+        padding: .75rem .75rem .75rem 0;
+        transition: .3s;
+    }
+    
+    .groups .items:hover {
+        background-color: var(--ulx-text-color);
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 12px 0px;
+    }
+    
+    .groups .items:focus-within {
+        background-color: var(--ulx-text-color);
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 12px 0px;
+    }
+    
+    .groups button {
+        width: 100%;
+        padding: .75rem;
+        color: var(--main-text-color);
+        font-size: 1rem;
+        background-color: var(--main-color);
+        border-radius: .5rem;
+        border-style: none;
+        cursor: pointer;
+    }
+    
+    .groups button:hover {
+        background-color: var(--alt-color);
+    }
+    
+    .head {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .head .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 50%;
+        width: 3rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        transform: translate(40%, -40%);
+        background: var(--main-color);
+    }
+    
+    .head .close i {
+        font-size: 1.5rem;
+        text-align: center;
+        color: white;
+        margin-top: .75rem;
+        cursor: inherit;
+        margin-bottom: .75rem;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .head .close {
+            border-radius: 0 .75rem;
+            transform: translate(1%, -1%);
+        }
+    }
+    
+    .head .close:hover {
+        background-color: var(--alt-color);
+    }
+    
+    .head .close:hover i {
+        color: var(--failed-color);
+    }
+    
+    .head .close i:hover {
+        color: var(--failed-color);
+    }
+    
+    .head .title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* transform: translateX(.75rem); */
+    }
+    
+    .head h3 {
+        font-size: 2rem;
+        text-align: center;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: var(--main-color);
+        font-weight: 900;
+        margin-top: .75rem;
+        z-index: 1;
+        margin-bottom: .75rem;
+    }
+    
+    .body {
+        margin-top: .75rem;
+    }
+    
+    .foot .text {
+        padding: 1rem 0 .75rem;
+    }
+    
+    .foot .text p {
+        display: flex;
+        justify-content: center;
+        color: var(--main-theme-color);
+        /* font-size: 1rem; */
+    }
+    
+    .foot .text p a {
+        color: var(--main-color);
+    }
+    
+    .foot .text p a:hover {
+        color: var(--alt-color);
+    }
+    
+    #acc-pop-close-click {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        background-color: black;
+        opacity: 0.4;
+    }
+    
+    .submit-form .groups .items {
+        margin-top: 1.1rem;
+    }
+    
+    .alert-danger {
+        background-color: var(--failed-color);
+        font-size: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: .3rem;
+        color: white;
+        border-style: none;
+        font-weight: 500;
+        padding: .75rem;
+        transition: .3s;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 12px 0px;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    @media screen and (max-width: 500px) {
+        .signinup {
+            min-width: 90%;
+            transition: top .5s;
+            border-radius: .75rem;
+        }
+    }
+    
+     ::placeholder {
+        text-transform: capitalize;
+    }
+</style>
+
+<body>
+    <button id="onc" style="padding:12px;background-color:#044bcd;color:#d4d4d4;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);font-size:4rem;cursor:pointer;border-radius:.5rem;">Sign in</button>
+    <div id="acc-pop-close-click"></div>
+    <div id="acc-pop" class="signinup">
+        <div class="sign-content">
+            <div class="tab-content">
+
+
+                <div class="signin-tab" id="signin-tab">
+                    <div class="account-check-box">
+                        <div class="head">
+                            <div class="title">
+                                <h3>Member Login</h3>
+                            </div>
+                            <div class="close" onclick="closeTabOfSign();return false;">
+                                <i class="fa fa-xmark"></i>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <form action="" name="login" id="signin-form" autocomplete="off" autocapitalize="off">
+                                <div class="form-elements">
+                                    <div class="alert-danger" id="login-error" style="display: none;"></div>
+                                    <div class="groups">
+                                        <div class="name">Email or Username</div>
+                                        <div class="items">
+                                            <div class="icons">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                            <input type="text" name="uname" placeholder="Email or Username" required id="uname">
+                                        </div>
+                                    </div>
+                                    <div class="groups">
+                                        <div class="name">Password <a href="#" onclick="switchTabOfSign('signin-tab', 'forgot-tab');return false;" style="float: right;font-size: inherit;font-weight: inherit; color: var(--main-color);">Forgot password?</a></div>
+                                        <div class="items">
+                                            <div class="icons">
+                                                <i class="fa fa-lock"></i>
+                                            </div>
+                                            <input type="password" placeholder="New Password" required id="password">
+                                            <i class="toggle-password fa fa-eye"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="submit-form">
+                                    <div class="groups">
+                                        <div class="items">
+                                            <button style="display: none;"></button>
+                                            <button type="button" onclick="loginValidation()">Log in</button>
+                                        </div>
+                                    </div>
+                                    <div class="loading-relative" id="login-loading" style="display: none;">
+                                        <div class="loading">
+                                            <div class="span1"></div>
+                                            <div class="span2"></div>
+                                            <div class="span3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="foot">
+                            <div class="group sign-next">
+                                <div class="text">
+                                    <p style="text-transform: capitalize;">Need Membership?&nbsp;<a href="#" onclick="switchTabOfSign('signin-tab', 'register-tab');return false;">Register</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="register-tab hidden" id="register-tab">
+                    <div class="account-check-box">
+                        <div class="head">
+                            <div class="title">
+                                <h3>Member Register</h3>
+                            </div>
+                            <div class="close" onclick="closeTabOfSign();return false;">
+                                <i class="fa fa-xmark"></i>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <form action="" name="register" autocomplete="off" id="register-form" autocapitalize="off">
+                                <div class="form-elements">
+                                    <div class="alert-danger" id="register-error" style="display: none;"></div>
+                                    <div id="register-tab-first">
+                                        <div class="groups">
+                                            <div class="name">Name</div>
+                                            <div class="items">
+                                                <div class="icons">
+                                                    <i class="fa-solid fa-circle-user"></i>
+                                                </div>
+                                                <input type="text" name="fullname" placeholder="Full Name" required id="fullname">
+                                            </div>
+                                        </div>
+                                        <div class="groups">
+                                            <div class="name">Email</a>
+                                            </div>
+                                            <div class="items">
+                                                <div class="icons">
+                                                    <i class="fa fa-envelope"></i>
+                                                </div>
+                                                <input type="email" placeholder="Email" required id="fullemail">
+                                            </div>
+                                        </div>
+                                        <div class="groups">
+                                            <div class="name">Username</div>
+                                            <div class="items">
+                                                <div class="icons">
+                                                    <i class="fa fa-user"></i>
+                                                </div>
+                                                <input type="text" name="fulluname" placeholder="Username" required id="fulluname">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="register-tab-next" style="display: none;">
+                                        <div class="groups">
+                                            <div class="name">New Password</div>
+                                            <div class="items">
+                                                <div class="icons">
+                                                    <i class="fa fa-lock"></i>
+                                                </div>
+                                                <input type="password" placeholder="New Password" required id="newpassword">
+                                                <i class="toggle-password fa fa-eye"></i>
+                                            </div>
+                                        </div>
+                                        <div class="groups">
+                                            <div class="name">Conform Password</a>
+                                            </div>
+                                            <div class="items">
+                                                <div class="icons">
+                                                    <i class="fa fa-lock"></i>
+                                                </div>
+                                                <input type="password" placeholder="Conform Password" required id="conformnewpassword">
+                                                <i class="toggle-password fa fa-eye"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="submit-form">
+                            <div class="groups">
+                                <div class="items">
+                                    <button type="button" onclick="changeRegisterForm(this); return false;">Next</button>
+                                </div>
+                            </div>
+                            <div class="loading-relative" id="login-loading" style="display: none;">
+                                <div class="loading">
+                                    <div class="span1"></div>
+                                    <div class="span2"></div>
+                                    <div class="span3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="foot">
+                        <div class="group sign-next">
+                            <div class="text">
+                                <p style="text-transform: capitalize;">Already a Member?&nbsp;<a href="#" onclick="switchTabOfSign('register-tab', 'signin-tab');return false;">Login</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="forgot-tab hidden" id="forgot-tab">
+                    <div class="account-check-box">
+                        <div class="head">
+                            <div class="title">
+                                <h3>Reset Password</h3>
+                            </div>
+                            <div class="close" onclick="closeTabOfSign();return false;">
+                                <i class="fa fa-xmark"></i>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <form action="" name="forgot-password" id="forgot-form" autocomplete="off" autocapitalize="off">
+                                <div class="form-elements">
+                                    <div class="alert-danger" id="forgot-error" style="display: none;"></div>
+                                    <div class="groups">
+                                        <div class="name">Account Email</div>
+                                        <div class="items">
+                                            <div class="icons">
+                                                <i class="fa fa-key"></i>
+                                            </div>
+                                            <input type="email" name="forgotemail" placeholder="Related Email" required id="forgotemail">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="submit-form">
+                                    <div class="groups">
+                                        <div class="items">
+                                            <button type="button">Submit</button>
+                                            <button style="display: none;"></button>
+                                        </div>
+                                    </div>
+                                    <div class="loading-relative" id="login-loading" style="display: none;">
+                                        <div class="loading">
+                                            <div class="span1"></div>
+                                            <div class="span2"></div>
+                                            <div class="span3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="foot">
+                            <div class="group sign-next">
+                                <div class="text">
+                                    <p style="text-transform: capitalize;">
+                                        <a href="#" onclick="switchTabOfSign('forgot-tab', 'signin-tab'); return false;"><i style="color: inherit; " class="fa fa-angle-left "></i> Back to Login</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- 
+            full name
+            username
+            email
+            new password
+            - conform password
+         -->
+
+</html>
+<script>
+    var inogen = document.getElementById("onc");
+    var inogenl = document.getElementById("acc-pop-close-click");
+    var inogenlim = document.getElementById("acc-pop");
+    document.getElementById("signin-form").onsubmit = (e) => {
+        loginValidation();
+        e.preventDefault();
+    };
+
+    inogen.onclick = function() {
+        inogenlim.style.top = "50%";
+        inogenl.style.display = "block";
+    }
+    inogenl.onclick = function() {
+        inogenl.style.display = "none";
+        inogenlim.style.top = "-100%";
+    }
+
+    function closeTabOfSign() {
+        let temp = document.getElementById('acc-pop');
+        temp.style.top = "-100%";
+        inogenl.style.display = "none";
+    }
+
+    function switchTabOfSign(par1, par2) {
+        let temp = document.getElementById(par1);
+        let temp1 = document.getElementById(par2);
+        temp.classList.add("hidden");
+        temp1.classList.remove("hidden");
+    }
+
+    function changeRegisterForm(temp10000) {
+        let temp = document.getElementById('register-tab-first');
+        let temp1 = document.getElementById('register-tab-next');
+        temp.style.display = "none";
+        temp1.style.display = "block";
+        temp10000.innerHTML = "Register";
+    }
+
+    function loginValidation() {
+        let temp124 = document.getElementById("signin-form");
+        let alertbox = document.getElementById('login-error');
+        let xv = document.getElementById("password");
+        alertbox.innerHTML = "";
+        if (xv.value == '' || xv.value == ' ' || xv.value == '  ') {
+            showAccError(alertbox, "Password must not be Empty")
+        }
+        if (xv.value.length <= 6) {
+            showAccError(alertbox, "Password must be more than 6")
+        }
+        // if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value)) {
+        //     showAccError(alertbox, "Password must be more than 6")
+
+        // }
+        setInterval(function() {
+            alertbox.style.display = "none";
+            alertbox.innerHTML = "";
+        }, 10000);
+    }
+
+
+    function showAccError(errid, msg) {
+        errid.style.display = "block";
+        errid.innerHTML += msg + "<br>";
+    }
+</script>
+<script>
+    $(function() {
+        $(".toggle-password ").click(function() {
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var type = $(this).hasClass("fa-eye-slash") ? "text " : "password ";
+            $("#password ").attr("type", type);
+        });
+    });
+</script>

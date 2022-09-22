@@ -1,0 +1,21 @@
+/
+	-> Genre
+	-> A-z list
+	-> Browse
+	-> Seasons
+	-> Theme
+	-> Types
+	-> Popular
+	-> Request
+	-> Random
+	-> Schedule
+	-> New Added
+	-> Newest
+	-> Updated
+	-> Ongoing
+	-> Completed
+	-> Producers
+	-> Browse
+	-> search
+	-> watch
+	-> list

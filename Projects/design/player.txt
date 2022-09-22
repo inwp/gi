@@ -1,0 +1,40 @@
+Main Player
+
+>Play/Pause
+>Rewind 10 sec
+>Sound
+>Time
+>Next 10 sec
+>Settings
+	quality
+	speed
+>PiP
+>full screan
+
+previous
+server
+Auto Play
+Focus
+Reload
+Report
+expand
+Add to list
+Auto next
+next
+previous
+
+loop
+
+
+
+
+Keyboard Shortcuts -> on/off
+Play/Pause -> SPACE/ENTER/P
+Increase Volume -> ↑
+Decrease Volume -> ↓
+Seek Forward -> →
+Seek Backward -> ←
+Captions On/Off -> c
+Fullscreen/Exit Fullscreen -> f
+Mute/Unmute -> m
+Seek % -> 0-9

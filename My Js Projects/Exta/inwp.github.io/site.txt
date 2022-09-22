@@ -1,0 +1,19 @@
+inwp.github.io
+
+index.html
+	blog.html
+	error.html
+	site-map.html
+	nepali-calender.html
+	online-calculator.html
+	about-me.html
+	download-for-sk.html
+	more-info.html
+	ebooks.html
+	online-notepad.html
+	en-calender.html
+	np-calender.html
+	online-conpiler.html
+	inotrack-download.html
+	inopad-download.html
+	

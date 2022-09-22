@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+      <head>
+            <meta charset="utf-8">
+            <meta name="description" content="Free Web tutorials">
+            <meta name="keywords" content="HTML,CSS,JavaScript">
+            <meta name="author" content="Inogen">
+            <meta name="viewport" content="width = device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="css/main.css">
+            <link rel="stylesheet" href="css/download.css">
+            <link rel="stylesheet" href="css/list.css">
+            <!-- <button class="btnioio"><i class="fa fa-download"></i> Download</button> -->
+            <title>Download - Ebook</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <meta name="robots" content="noindex, noflow">
+            <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+            <script src="javascript/main_download.js" type="text/javascript" charset="utf-8"></script>
+            <style media="screen">
+            body{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: scale-down;
+            }
+
+            </style>
+      </head>
+      <body>
+            <!-- for scan list from myul -->
+            <div id="wrap">
+              <div class="bg">
+                <img class="layer2" src="bg.jpg" alt="" />
+                <h1 style="color: #33adff/*rgba(3, 32, 252, 0.9);*/" class="layer1">Welcome</h1>
+            </div>
+          </div>
+          <br>
+            <input type="text" id="myInput" onkeyup="myFunction()" spellcheck="false"  placeholder="Search for books names.." autocomplete="off" title="Type in a ebook name" auto>
+            <!-- list of book -->
+            <ul id="myUL">
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The Art of saying no</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;No more Mr nice guy</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The Phycology Influence of Persuasion</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The power of Now</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Think like a monk</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Think and grow rich</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The art of war</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The law of human nature</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Mastery</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Can,t hurt me</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The art of eduction</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Rich dad poor dad</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Dare to lead</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Better small talk</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Read people like a book</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;How to talk with anyone</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Surrounded by iditos</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;Phychology in bite sized chunks</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The power os us</a></li>
+                  <li><a href="#">&nbsp;&nbsp;<button id="titon" style="text-align: center;"><i class="fa fa-download"></i></button>&nbsp;&nbsp;The righteous mind</a></li>
+            </ul>
+            <div class="cont">
+                    <p> Download all books in one zip file </p>
+                    <div id="download"><button class="btnioio" title="Download all books in one zip file"><i class="fa fa-download"></i> Download </button><br>
+                          <button style="background: red;" class="btnioio" title="Download all books in one zip file from google drive"><i class="fa fa-download"></i> Download </button></div>
+                    <!-- <p> Others Download </p>
+                    <div id="download"><button class="btnioio" title="Others Download"><i class="fa fa-download"></i> Download</button></div> -->
+            </div>
+            <!--
+            <button onclick="ino()"id = "ino">Download</button>
+            <div id="countdown"> </div>
+            <div id="download"><button>Download</button></div>
+            <script>
+                  document.getElementById("download").style.display = "none";
+                  function ino() {
+                        document.getElementById("ino").style.display = "none";
+                        var countdownElement = document.getElementById('countdown'),
+                        downloadButton = document.getElementById('download'),
+                        seconds = 10,
+                        second = 0,
+                        interval;
+                        downloadButton.style.display = 'none';
+                        interval = setInterval(function() {
+                              countdownElement.firstChild.data = 'You can start your download in ' + (seconds - second) + ' seconds';
+                              if (second >= seconds) {
+                                   countdownElement.style.display = "none";
+                                  downloadButton.style.display = 'block';
+                                  clearInterval(interval);
+                            }
+                            second++;
+                      }, 1000);
+                }
+            </script> -->
+      </body>
+</html>

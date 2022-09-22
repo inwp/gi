@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@600;700&display=swap');
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            font-size: 0;
+        }
+        
+        tr>td {
+            text-align: center;
+            font-size: 1rem;
+        }
+        
+        table>tbody>tr:nth-child(odd) {
+            background-color: red;
+        }
+        
+        table>tbody>tr:nth-child(even) {
+            background-color: pink;
+        }
+        
+        thead>tr {
+            background-color: aquamarine;
+            font-size: 0;
+        }
+        
+        thead>tr>th {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <section class="calender">
+            <div class="row-1">
+                <table class="calender-table" border="1">
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row-2">
+
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #ddd;
+}
+
+.episode-list {
+    outline: none;
+    background-color: #333333;
+}
+
+.ei-episodes {
+    display: flex;
+    justify-content: left;
+}
+
+.ei-episodes li {
+    margin: 3px;
+    min-width: 30px;
+    text-align: center;
+    max-width: 40px;
+    margin-top: 12px;
+    border-radius: 3px;
+    padding: 6px;
+    background-color: #444;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.el-head {
+    display: flex;
+    justify-content: space-between;
+}

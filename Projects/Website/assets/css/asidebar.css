@@ -1,0 +1,41 @@
+aside.asidebar {
+    background-color: #222;
+    width: calc(25% - 1.5rem);
+    padding: .75rem;
+}
+
+aside .quickfilter {
+    color: white;
+}
+
+aside.asidebar .quickfilter .dropdown-items {
+    display: none;
+}
+
+aside.asidebar .quickfilter .sec1 {
+    width: auto;
+    display: block;
+}
+
+aside.asidebar .quickfilter .sec2 input[type="text"] {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+aside.asidebar .quickfilter .sec2 button[type="submit"] {
+    width: 100%;
+}
+
+aside.asidebar .quickfilter .dropdown-toggle {
+    float: left;
+    width: 50%;
+    /* width: calc(47% -1 rem); */
+    /* display: inline-block; */
+    text-align: center;
+}
+
+
+/* .dropdown {
+    display: inline-block;
+} */

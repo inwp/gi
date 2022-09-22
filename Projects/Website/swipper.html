@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/Library/Swipper/swiper-bundle.min.css" />
+	<style>
+		.swiper {
+			margin: auto;
+			width: 80vw;
+			height: 80vh;
+		}
+
+		.swiper-slide {
+			background: linear-gradient(135deg, rgb(255, 55, 0), rgb(234, 0, 255)), rgb(255, 208, 0);
+		}
+
+		.swipper-controller .swiper-button-next,
+		.swipper-controller .swiper-button-prev {
+			background-color: blue !important;
+			border-radius: 50% !important;
+			width: 4rem;
+			height: 4rem;
+			color: white;
+		}
+
+		.swiper-slide {
+			display: flex;
+		}
+	</style>
+</head>
+
+<body>
+	<section class="slideshow">
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide item">
+					<div class="details">
+						<h2 class="name">Lorem ipsum dolor sit.</h2>
+						<div class="icon-info"></div>
+						<div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere vel beatae
+							quod repellendus itaque, obcaecati asperiores commodi consectetur excepturi repudiandae
+							doloribus recusandae aliquid minima officiis quae omnis, consequuntur pariatur, magni quos
+							minus. Molestias, laborum! Dolorum ipsum error doloremque modi vel incidunt aspernatur
+							suscipit doloribus non. Consectetur aut necessitatibus qui neque dolorum natus suscipit
+							harum nulla exercitationem quod non, ratione incidunt ea quam nostrum error ipsum inventore
+							voluptates in perferendis unde! Deleniti dicta placeat odit quod dolore, tenetur distinctio
+							nam esse dolorum facere harum possimus, ducimus adipisci id obcaecati ea magni rerum quo ad.
+							Dolor maiores, adipisci cumque odit quidem voluptatum magni voluptatibus recusandae
+							accusamus id fugiat nemo ullam? Ab rem repudiandae eaque magni nesciunt assumenda,
+							asperiores ducimus eum repellendus ratione.</div>
+						<div class="action"></div>
+					</div>
+					<div class="poster"><img
+							src="https://static.bunnycdn.ru/i/cache/images/5/58/5806a16f2892768b4930c39ebf6ce756.jpg"
+							alt=""></div>
+				</div>
+			</div>
+			<div class="swipper-controller">
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</section>
+	<script src="assets/Library/Swipper/swiper-bundle.min.js"></script>
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 1,
+			spaceBetween: 1,
+			loop: true,
+			grabCursor: true,
+
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			}
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+    "short_name": "9Anime",
+    "name": "9Anime",
+    "description": "9Anime",
+    "icons": [{
+        "src": "assets/icons/favicon.png",
+        "type": "image/png",
+        "sizes": "412x412"
+    }],
+    "start_url": "/",
+    "background_color": "#fff",
+    "theme_color": "#fff",
+    "display": "standalone",
+    "orientation": "any",
+    "scope": "/"
+}

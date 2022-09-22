@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="shortcut icon" href="/assets/icons/favicons/favicon.png" type="image/x-icon">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
+	<link rel="stylesheet" href="assets/Library/fontawesome/css/all.min.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@600;700&display=swap');
+
+		:root {
+			--text-font: 'Open Sans', sans-serif;
+			--header-font: 'Anek Latin', sans-serif;
+			--main-color: #5d0cce;
+			--alt-color: #4400a3;
+			--main-green-color: #3acc1d;
+			--alt-green-color: #34b11b;
+			--main-text-color: #f0f0f0;
+			--alt-text-color: #e0e0e0;
+			--l-text-color: #e4e4e4;
+			--lx-text-color: #d4d4d4;
+			--vlx-text-color: #c8c8c8;
+			--ulx-text-color: #bbbbbb;
+			--main-theme-color: #0a0a0a;
+			--alt-hover-theme-color: #131313;
+			--alt-theme-color: #181818;
+			--l-theme-color: #202020;
+			--lx-theme-color: #282828;
+			--vlx-theme-color: #303030;
+			--ulx-theme-color: #383838;
+			--sucess-color: #08c456;
+			--sucess-hover-color: #149d4d;
+			--warning-color: #ffa200;
+			--warning-hover-color: #d68700;
+			--message-color: #1458c5;
+			--message-hover-color: #0f0fac;
+			--failed-color: #e51414;
+			--failed-hover-color: #b00d0d;
+			--border-radius: .4rem;
+			--box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+			--box-shadow-hover: box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+		}
+
+
+		/* :root {--text-font: 'Open Sans', sans-serif;--header-font: 'Anek Latin', sans-serif;--main-color: #0746bd;--alt-color: #064897;--main-blue-color: #6666ff;--bright-blue-color: rgb(0, 62, 248);--alt-blue-color: #216dcf;--main-green-color: #3acc1d;--alt-green-color: #34b11b;--main-text-color: #0a0a0a;--alt-text-color: #131313;--l-text-color: #202020;--lx-text-color: #282828;--vlx-text-color: #303030;--ulx-text-color: #383838;--main-theme-color: #fafafa;--alt-hover-theme-color: #b9b9b9;--alt-theme-color: #d0d0d0;--l-theme-color: #c6c6c6;--lx-theme-color: #b0b0b0;--vlx-theme-color: #a0a0a0;--ulx-theme-color: #888888;--sucess-color: #08c456;--sucess-hover-color: #149d4d;--warning-color: #ffa200;--warning-hover-color: #d68700;--message-color: #1458c5;--message-hover-color: #0f0fac;--failed-color: #e51414;--failed-hover-color: #b00d0d;--border-radius: .4rem;--box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);--box-shadow-hover: box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);} */
+
+		* {
+			font-family: var(--text-font);
+			margin: 0;
+			scroll-behavior: smooth;
+			padding: 0;
+			text-decoration: none;
+			color: var(--main-text-color);
+			box-sizing: border-box;
+			border-style: none;
+			outline-style: none;
+			list-style: none;
+		}
+
+		html {
+			font-size: 100%;
+			background: var(--main-theme-color);
+		}
+
+		::-webkit-scrollbar {
+			-webkit-transition: background .3s;
+			transition: background .3s;
+			background-color: var(--alt-theme-color);
+			width: 1rem;
+			height: 1rem;
+		}
+
+		::-webkit-scrollbar-track {
+			background-color: var(--alt-theme-color);
+			background-clip: padding-box;
+			border: .3rem solid rgba(0, 0, 0, 0);
+		}
+
+		::-webkit-scrollbar-thumb {
+			border: .3rem solid rgba(0, 0, 0, 0);
+			background-clip: padding-box;
+			background-color: #dddddd;
+			border-radius: 112rem;
+			min-height: 4rem;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background-color: var(--message-color);
+			border: .3rem solid rgba(0, 0, 0, 0);
+			background-clip: padding-box;
+			-webkit-transition: background-color 1.3s;
+			transition: background-color .3s;
+			border-radius: 112rem;
+		}
+
+		::-webkit-scrollbar-thumb:active {
+			background-color: var(--main-color);
+			-webkit-transition: background-color 1.3s;
+			transition: background-color .3s;
+			border: .3rem solid rgba(0, 0, 0, 0);
+			background-clip: padding-box;
+			border-radius: 112rem;
+		}
+
+		.toggle-opt {
+			line-height: 1rem;
+			position: relative;
+			display: inline-block;
+			width: 2rem;
+			height: 1rem;
+		}
+
+		.toggle-opt .fin-in {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.toggle-slid {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			border-radius: 2rem;
+			right: 0;
+			bottom: 0;
+			background-color: #ccc;
+			-webkit-transition: .15s;
+			transition: .15s;
+		}
+
+		.toggle-slid:before {
+			position: absolute;
+			content: "";
+			height: .75rem;
+			width: .75rem;
+			left: .125rem;
+			bottom: .125rem;
+			border-radius: 50%;
+			background-color: white;
+			-webkit-transition: .14s;
+			transition: .15s;
+		}
+
+		.fin-in:checked+.toggle-slid {
+			background-color: #2196F3;
+		}
+
+		.fin-in:focus+.toggle-slid {
+			box-shadow: 0 0 1px #2196F3;
+		}
+
+		.fin-in:checked+.toggle-slid:before {
+			transform: translateX(1rem);
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+		.commonsettings {
+			background-color: var(--lx-theme-color);
+			max-width: 25rem;
+			user-select: none;
+			margin: auto;
+			border-radius: var(--border-radius);
+			/* padding: 1rem; */
+			width: max-content;
+		}
+
+		.commonsettings .head {
+			position: relative;
+			padding: .5rem 1rem .5rem 1rem;
+			border-bottom: .125rem solid red;
+		}
+
+		.commonsettings .head .title {
+			display: flex;
+		}
+
+		.commonsettings .head .title i,
+		.commonsettings .head .title h3 {
+			line-height: 3rem;
+			font-size: 1.5rem;
+			padding-right: 2rem;
+		}
+
+		.commonsettings .head .close {
+			background-color: red;
+			width: 3rem;
+			height: 3rem;
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translate(50%, -50%);
+			line-height: 3rem;
+			text-align: center;
+			border-radius: 50%;
+		}
+
+		.commonsettings .body {
+			padding: 1rem;
+		}
+
+		.commonsettings .body .list .items {
+			display: flex;
+			border-radius: var(--border-radius);
+			padding: .5rem;
+		}
+
+		.commonsettings .body .list .items:hover {
+			background-color: #0f0fac;
+		}
+
+		.commonsettings .body .list .items .icon i {
+			min-width: 1.5rem;
+			display: flex;
+			/* margin-left: -.25rem; */
+			margin-right: .3rem;
+			justify-content: center;
+			text-align: center;
+			line-height: 1.5rem;
+		}
+	</style>
+	<!-- <label class="toggle-opt">
+      <input class="fin-in" type="toggle-ckb" checked>
+      <span class="toggle-slid round"></span>
+    </label> -->
+</head>
+
+<body>
+	<button style="background-color: #08c456;">Settings</button>
+	<div class="commonsettings">
+		<div class="head">
+			<div class="title">
+				<i class="fa fa-gear"></i>
+				<h3>Settings</h3>
+			</div>
+			<div class="close">
+				<i class="fa fa-x"></i>
+			</div>
+		</div>
+		<div class="body">
+			<div class="options">
+				<div class="list">
+					<div class="items">
+						<div class="icon">
+							<i class="fa-solid fa-forward-step"></i>
+						</div>
+						<div class="label">
+							Auto next
+						</div>
+						<div class="option">
+							<div class="toggle">
+								<label class="toggle-opt">
+									<input class="fin-in" type="checkbox" checked>
+									<span class="toggle-slid"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="items">
+						<div class="icon">
+							<i class="fa-solid fa-text-height"></i>
+						</div>
+						<div class="label">
+							Text font size 0.5x-3x
+						</div>
+						<div class="option"></div>
+					</div>
+					<div class="items">
+						<div class="icon">
+							<i class="fa-solid fa-circle-half-stroke"></i>
+						</div>
+						<div class="label">
+							Theme Dark /Light/ Auto
+						</div>
+						<div class="option"></div>
+					</div>
+					<div class="items">
+						<div class="icon">
+							<i class="fa-solid fa-keyboard"></i>
+						</div>
+						<div class="label">
+							Keybord shortcuts
+						</div>
+						<div class="option">
+							<div class="toggle">
+								<label class="toggle-opt">
+									<input class="fin-in" type="checkbox" checked>
+									<span class="toggle-slid"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="items">
+						<div class="icon">
+							<i class="fa-solid fa-rotate-right"></i>
+						</div>
+						<div class="label">
+							Show continue watching in home page
+						</div>
+						<div class="option">
+							<div class="toggle">
+								<label class="toggle-opt">
+									<input class="fin-in" type="checkbox" checked>
+									<span class="toggle-slid"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="items">
+						<div class="icon">
+							<i class="fa-solid fa-play"></i>
+						</div>
+						<div class="label">
+							Auto play
+						</div>
+						<div class="option">
+							<div class="toggle">
+								<label class="toggle-opt">
+									<input class="fin-in" type="checkbox" checked>
+									<span class="toggle-slid"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="items">
+						<div class="icon">
+							<i class="fa-solid fa-headphones"></i>
+						</div>
+						<div class="label">
+							Anime Audio Any/Subbed/Dubbed
+						</div>
+						<div class="option"></div>
+					</div>
+					<div class="items">
+						<div class="icon">
+							<i class="fa-solid fa-language"></i>
+						</div>
+						<div class="label">
+							Anime name English/Japanese
+						</div>
+						<div class="option"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

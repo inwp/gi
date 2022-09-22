@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<!-- 
+    alpha -> with out tab only title
+    delta -> with tab in centre
+    beta -> with tab in end
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <link rel="shortcut icon" href="/assets/icons/favicons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/watch.css">
+    <link rel="stylesheet" href="assets/Library/fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <div id="slidebar-container"></div>
+    <div class="body">
+        <header>
+            <nav class="navbar">
+                <div class="left-bar">
+                    <div id="menu-toggle" class="menu-toggle">
+                        <span></span>
+                    </div>
+                    <div class="logo-bar">
+                        <div id="logo">
+                            <a href="/"><img src="assets/icons/logos/logo.png" draggable="false" height="51px" alt="Barry Anime"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <form autocomplete="off" action="">
+                        <div class="search-box">
+                            <input type="text" autocapitalize="off" name="q" id="search" autocomplete="off" spellcheck="false" placeholder="Search Anime">
+                            <button type="submit" id="search-btn"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="right-bar">
+                    <div class="items" id="browse-anime"><i class="fa fa-compass"></i><span class="nav-label">Browse</span></div>
+                    <div class="items" id="random-anime"><i class="fa fa-shuffle"></i><span class="nav-label">Random</span></div>
+                    <div class="items single" id="search-icon"><i class="fa fa-search"></i></div>
+                    <div class="items single" id="preference"><i class="fa fa-gear"></i></div>
+                    <div class="items" id="account"><i class="fa fa-user"></i><span class="nav-label">Sign In</span></div>
+                </div>
+
+            </nav>
+            <div class="progress-container" style="position: fixed; z-index: 100; left: 0; top: 4.7rem; width: 100%; height: 2px; background: #666;">
+                <div id="progress"></div>
+            </div>
+            <nav id="slidebar" class="slidebar">
+                <ul class="item">
+                    <li class="items"><a href="#" class="link-items"><i class="fa fa-house"></i> Home</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="far fa-compass"></i> Browse</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="fa fa-fire"></i> Popular</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="far fa-rectangle-vertical-history"></i> Genres</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="fa fa-tags"></i> Themes</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="fa fa-square"></i> Types</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="fa fa-gear"></i> Settings</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="fa-solid fa-video-plus"></i> Request</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="fa fa-shuffle"></i> Random</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="far fa-bell-plus"></i> Following</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="far fa-calendar-check"></i> schedule</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="fas fa-bookmark"></i> My bookmarks</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="fa"></i> Newest</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="fa-solid fa-video-arrow-up-right"></i> Ongoing</a></li>
+                    <li class="items"><a href="#" class="link-items"><i class="fa fa-square-up-right"></i></i> Updated</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container page">
+            <main class="content container">
+                <section class="player" id="player">
+                    <div class="header" id="player-mover">sf</div>
+                    <div class="player">
+                        <iframe src="/assets/images/image.png" scroll frameborder="0" width="100%"></iframe>
+                    </div>
+                    <div class="controlsets">
+                        <div class="controller">
+                            <div class="left">
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                                <div class="items">
+                                    <i class="fa fa-forward" aria-hidden="true"></i>
+                                    <span>Next</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="anime container">
+                    <div class="main-page-list alpha anime-list">
+                        <div class="head">
+                            <div class="head-left">
+                                <div class="title">
+                                    <h4>You may like</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container body lianime">
+                            <ul class="anime-card-list">
+                                <li>
+                                    <div class="anime-card" data-tooltip="">
+                                        <div class="animeposter" data-bg="">
+                                            <a href=""><img src="assets/images/1912038.jpg" draggable="false" class="poster" width="100%"></a>
+                                            <i class="fa-regular fa-circle-play"></i>
+                                            <div class="tag ac-rating"><span>3.3</span></div>
+                                            <div class="tags ac-topright">
+                                                <div class="tage ac-age">
+                                                    <span class="agere">18+</span>
+                                                    <!-- <span class="agenr">14+</span> -->
+                                                </div>
+                                                <div class="tage ac-type">
+                                                    <span class="tv">tv</span>
+                                                    <!-- <span class="ova">ova</span>
+                                                <span class="ona">ona</span>
+                                                <span class="movie">movie</span>
+                                                <span class="special">Special</span> -->
+
+                                                </div>
+                                            </div>
+                                            <div class="tags ac-lang">
+                                                <div class="tage"><span class="sub">SUB</span></div>
+                                                <div class="tage"><span class="dub">DUB</span></div>
+                                            </div>
+                                            <div class="tag ac-ep"><span>Ep 000/000</span></div>
+                                        </div>
+                                        <div class="animename">
+                                            <ul class="genres">
+                                                <li><a href="">Action</a></li>
+                                                <li><a href="">Drama</a></li>
+                                            </ul>
+                                            <h4><a href="#" class="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, illo?</a></h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="anime-card" data-tooltip="">
+                                        <div class="animeposter" data-bg="">
+                                            <a href=""><img src="assets/images/1912038.jpg" draggable="false" class="poster" width="100%"></a>
+                                            <i class="fa-regular fa-circle-play"></i>
+                                            <div class="tag ac-rating"><span>3.3</span></div>
+                                            <div class="tags ac-topright">
+                                                <div class="tage ac-age">
+                                                    <span class="agere">18+</span>
+                                                    <!-- <span class="agenr">14+</span> -->
+                                                </div>
+                                                <div class="tage ac-type">
+                                                    <span class="tv">tv</span>
+                                                    <!-- <span class="ova">ova</span>
+                                                <span class="ona">ona</span>
+                                                <span class="movie">movie</span>
+                                                <span class="special">Special</span> -->
+
+                                                </div>
+                                            </div>
+                                            <div class="tags ac-lang">
+                                                <div class="tage"><span class="sub">SUB</span></div>
+                                                <div class="tage"><span class="dub">DUB</span></div>
+                                            </div>
+                                            <div class="tag ac-ep"><span>Ep 000/000</span></div>
+                                        </div>
+                                        <div class="animename">
+                                            <ul class="genres">
+                                                <li><a href="">Action</a></li>
+                                                <li><a href="">Drama</a></li>
+                                            </ul>
+                                            <h4><a href="#" class="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, illo?</a></h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="anime-card" data-tooltip="">
+                                        <div class="animeposter" data-bg="">
+                                            <a href=""><img src="assets/images/1912038.jpg" draggable="false" class="poster" width="100%"></a>
+                                            <i class="fa-regular fa-circle-play"></i>
+                                            <div class="tag ac-rating"><span>3.3</span></div>
+                                            <div class="tags ac-topright">
+                                                <div class="tage ac-age">
+                                                    <span class="agere">18+</span>
+                                                    <!-- <span class="agenr">14+</span> -->
+                                                </div>
+                                                <div class="tage ac-type">
+                                                    <span class="tv">tv</span>
+                                                    <span class="ova">ova</span>
+                                                    <span class="ona">ona</span>
+                                                    <span class="movie">movie</span>
+                                                    <span class="special">Special</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="tags ac-lang">
+                                                <div class="tage"><span class="sub">SUB</span></div>
+                                                <div class="tage"><span class="dub">DUB</span></div>
+                                            </div>
+                                            <div class="tag ac-ep"><span>Ep 000/000</span></div>
+                                        </div>
+                                        <div class="animename">
+                                            <ul class="genres">
+                                                <li><a href="">Action</a></li>
+                                                <li><a href="">Drama</a></li>
+                                            </ul>
+                                            <h4><a href="#" class="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, illo?</a></h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="anime-card" data-tooltip="">
+                                        <div class="animeposter" data-bg="">
+                                            <a href=""><img src="assets/images/1912038.jpg" draggable="false" class="poster" width="100%"></a>
+                                            <i class="fa-regular fa-circle-play"></i>
+                                            <div class="tag ac-rating"><span>3.3</span></div>
+                                            <div class="tags ac-topright">
+                                                <div class="tage ac-age">
+                                                    <span class="agere">18+</span>
+                                                    <!-- <span class="agenr">14+</span> -->
+                                                </div>
+                                                <div class="tage ac-type">
+                                                    <span class="tv">tv</span>
+                                                    <!-- <span class="ova">ova</span>
+                                                <span class="ona">ona</span>
+                                                <span class="movie">movie</span>
+                                                <span class="special">Special</span> -->
+
+                                                </div>
+                                            </div>
+                                            <div class="tags ac-lang">
+                                                <div class="tage"><span class="sub">SUB</span></div>
+                                                <div class="tage"><span class="dub">DUB</span></div>
+                                            </div>
+                                            <div class="tag ac-ep"><span>Ep 000/000</span></div>
+                                        </div>
+                                        <div class="animename">
+                                            <ul class="genres">
+                                                <li><a href="">Action</a></li>
+                                                <li><a href="">Drama</a></li>
+                                            </ul>
+                                            <h4><a href="#" class="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, illo?</a></h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="anime-card" data-tooltip="">
+                                        <div class="animeposter" data-bg="">
+                                            <a href=""><img src="assets/images/1912038.jpg" draggable="false" class="poster" width="100%"></a>
+                                            <i class="fa-regular fa-circle-play"></i>
+                                            <div class="tag ac-rating"><span>3.3</span></div>
+                                            <div class="tags ac-topright">
+                                                <div class="tage ac-age">
+                                                    <span class="agere">18+</span>
+                                                    <!-- <span class="agenr">14+</span> -->
+                                                </div>
+                                                <div class="tage ac-type">
+                                                    <span class="tv">tv</span>
+                                                    <!-- <span class="ova">ova</span>
+                                                <span class="ona">ona</span>
+                                                <span class="movie">movie</span>
+                                                <span class="special">Special</span> -->
+
+                                                </div>
+                                            </div>
+                                            <div class="tags ac-lang">
+                                                <div class="tage"><span class="sub">SUB</span></div>
+                                                <div class="tage"><span class="dub">DUB</span></div>
+                                            </div>
+                                            <div class="tag ac-ep"><span>Ep 000/000</span></div>
+                                        </div>
+                                        <div class="animename">
+                                            <ul class="genres">
+                                                <li><a href="">Action</a></li>
+                                                <li><a href="">Drama</a></li>
+                                            </ul>
+                                            <h4><a href="#" class="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, illo?</a></h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="anime-card" data-tooltip="">
+                                        <div class="animeposter" data-bg="">
+                                            <a href=""><img src="assets/images/1912038.jpg" draggable="false" class="poster" width="100%"></a>
+                                            <i class="fa-regular fa-circle-play"></i>
+                                            <div class="tag ac-rating"><span>3.3</span></div>
+                                            <div class="tags ac-topright">
+                                                <div class="tage ac-age">
+                                                    <span class="agere">18+</span>
+                                                    <!-- <span class="agenr">14+</span> -->
+                                                </div>
+                                                <div class="tage ac-type">
+                                                    <span class="tv">tv</span>
+                                                    <!-- <span class="ova">ova</span>
+                                                <span class="ona">ona</span>
+                                                <span class="movie">movie</span>
+                                                <span class="special">Special</span> -->
+
+                                                </div>
+                                            </div>
+                                            <div class="tags ac-lang">
+                                                <div class="tage"><span class="sub">SUB</span></div>
+                                                <div class="tage"><span class="dub">DUB</span></div>
+                                            </div>
+                                            <div class="tag ac-ep"><span>Ep 000/000</span></div>
+                                        </div>
+                                        <div class="animename">
+                                            <ul class="genres">
+                                                <li><a href="">Action</a></li>
+                                                <li><a href="">Drama</a></li>
+                                            </ul>
+                                            <h4><a href="#" class="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, illo?</a></h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="anime-card" data-tooltip="">
+                                        <div class="animeposter" data-bg="">
+                                            <a href=""><img src="assets/images/1912038.jpg" draggable="false" class="poster" width="100%"></a>
+                                            <i class="fa-regular fa-circle-play"></i>
+                                            <div class="tag ac-rating"><span>3.3</span></div>
+                                            <div class="tags ac-topright">
+                                                <div class="tage ac-age">
+                                                    <span class="agere">18+</span>
+                                                    <!-- <span class="agenr">14+</span> -->
+                                                </div>
+                                                <div class="tage ac-type">
+                                                    <span class="tv">tv</span>
+                                                    <!-- <span class="ova">ova</span>
+                                                <span class="ona">ona</span>
+                                                <span class="movie">movie</span>
+                                                <span class="special">Special</span> -->
+
+                                                </div>
+                                            </div>
+                                            <div class="tags ac-lang">
+                                                <div class="tage"><span class="sub">SUB</span></div>
+                                                <div class="tage"><span class="dub">DUB</span></div>
+                                            </div>
+                                            <div class="tag ac-ep"><span>Ep 000/000</span></div>
+                                        </div>
+                                        <div class="animename">
+                                            <ul class="genres">
+                                                <li><a href="">Action</a></li>
+                                                <li><a href="">Drama</a></li>
+                                            </ul>
+                                            <h4><a href="#" class="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, illo?</a></h4>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <aside class="asidebar">
+                <section class="relatedanime alpha">
+                    <div class="head">
+                        <div class="title">
+                            <h4>Quick filter</h4>
+                        </div>
+                    </div>
+                    <div class="body">
+                    </div>
+                </section>
+                <section class="tendering alpha">
+                    <div class="head">
+                        <div class="title">
+                            <h4>Anime Genres</h4>
+                        </div>
+                    </div>
+                    <div class="body">
+                    </div>
+                </section>
+                <section class="side-animelist alpha">
+                    <div class="head">
+                        <div class="title">
+                            <h4>Suggested</h4>
+                        </div>
+                    </div>
+                    <div class="body">
+
+                    </div>
+                </section>
+            </aside>
+        </div>
+
+        <footer>
+            <div class="hellogototop">
+                <div class="gototop">
+                    <a href="#top">
+                        <div><i class="fa fa-arrow-up"></i></div>
+                    </a>
+                </div>
+            </div>
+            <div class="az-list container">
+                <div class="title">
+                    <span>A-Z List</span><span>Search Anime by Alphabetic order</span>
+                </div>
+                <div class="items">
+                    <a href="#" class="footer-az-btn" title="All">All</a> <a href="#" class="footer-az-btn" style="width: 40px;" title="0-9">0-9</a> <a href="#" class="footer-az-btn" title="A">A</a> <a href="#" class="footer-az-btn" title="B">B</a>
+                    <a href="#" class="footer-az-btn" title="C">C</a> <a href="#" class="footer-                        class=" footer-az-btn " title="Z ">Z</a>
+                    az-btn" title="D">D</a> <a href="#" class="footer-az-btn" title="E">E</a> <a href="#" class="footer-az-btn" title="F">F</a> <a href="#" class="footer-az-btn" title="G">G</a> <a href="#" class="footer-az-btn" title="H">H</a> <a href="#"
+                        class="footer-az-btn" title="I">I</a> <a href="#" class="footer-az-btn" title="J">J</a> <a href="#" class="footer-az-btn" title="K">K</a> <a href="#" class="footer-az-btn" title="L">L</a> <a href="#" class="footer-az-btn" title="M">M</a>                    <a href="#" class="footer-az-btn" title="N">N</a> <a href="#" class="footer-az-btn" title="O">O</a> <a href="#" class="footer-az-btn" title="P">P</a> <a href="#" class="footer-az-btn" title="Q">Q</a> <a href="#" class="footer-az-btn"
+                        title="R">R</a> <a href="#" class="footer-az-btn" title="S">S</a> <a href="#" class="footer-az-btn" title="T">T</a> <a href="#" class="footer-az-btn" title="U">U</a> <a href="#" class="footer-az-btn" title="V">V</a> <a href="#" class="footer-az-btn"
+                        title="W">W</a> <a href="#" class="footer-az-btn" title="X">X</a> <a href="#" class="footer-az-btn" title="Y">Y</a> <a href="#" class="footer-az-btn" title="Z">Z</a>
+                </div>
+            </div>
+            <div class="footer-main container">
+                <div class="rows">
+                    <div class="item">
+                        <h4>Main</h4>
+                        <ul>
+                            <li><a href="#" title="Home">Home</a></li>
+                            <li><a href="#" title="About">About</a></li>
+                            <li><a href="#" title="Privacy">Privacy</a></li>
+                            <li><a href="#" title="Terms">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="item">
+                        <h4>Links</h4>
+                        <ul>
+                            <li><a href="#">A-Z list</a></li>
+                            <li><a href="#">Ongoing Anime</a></li>
+                            <li><a href="#">Popular Anime</a></li>
+                            <li><a href="#">Upcoming Anime</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="item">
+                        <h4>Help</h4>
+                        <ul>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Request</a></li>
+                            <li><a href="#">Send Message</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar container">
+                <div class="footer-copyright">Copyright &copy; <a href="/">inogenlimbu.com</a>. All Rights Reserved</div>
+        </footer>
+        </div>
+        <script>
+            const menuToggle = document.getElementById('menu-toggle');
+            const slidebar = document.getElementById('slidebar');
+            const slidebari = document.getElementById('slidebar-container');
+            menuToggle.onclick = function() {
+                menuToggle.classList.toggle("active");
+                slidebar.classList.toggle("active");
+                slidebari.classList.toggle("active");
+            }
+            slidebari.onclick = function() {
+                menuToggle.classList.remove("active");
+                slidebar.classList.remove("active");
+                slidebari.classList.remove("active");
+            }
+            window.onscroll = function() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progress").style.width = scrolled + "%";
+            };
+        </script>
+</body>
+
+</html>

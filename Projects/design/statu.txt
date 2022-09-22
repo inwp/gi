@@ -1,0 +1,28 @@
+added.html
+az-list.html
+contact.html
+faq.html
+home.html
+index.html
+manifest.html
+most-watched.html
+movie.html
+newest.html
+ona.html
+ongoing.html
+ova.html
+schedule.html
+special.html
+tv.html
+upcomming.htmk
+updated.html
+watch
+	---
+theme
+	---
+genre
+	---
+az-list
+	---
+cdn-cgi
+	---

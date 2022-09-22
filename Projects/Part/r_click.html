@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Custom Context Menu | CodingNepal</title>
+    <style>
+        /* Import Google Font - Poppins */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            list-style: none;
+        }
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #8B55E9 0%, #5D6BE6 100%)
+        }
+        
+        #rtoption {
+            /* visibility: hidden; */
+            position: absolute;
+            width: 300px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        #rtoption #rtmenu {
+            padding: 10px 12px;
+        }
+        
+        #rtcontent .rt-item {
+            list-style: none;
+            /* font-size: 22px; */
+            height: 30px;
+            display: flex;
+            width: 100%;
+            cursor: pointer;
+            align-items: center;
+            border-radius: 5px;
+            margin-bottom: 2px;
+            padding: 0 5px 0 10px;
+        }
+        
+        #rtcontent .rt-item i {
+            min-width: 20px;
+        }
+        
+        #rtcontent .rt-item:hover {
+            background: #f2f2f2;
+        }
+        
+        #rtcontent .rt-item span {
+            margin-left: 8px;
+            font-size: 1.03rem;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="rtoption" id="rtoption">
+        <div class="rtoption" id="rtcontent">
+            <div class="rtoption" id="rtmenu">
+                <li class="rt-item rtoption" onclick="history.back()">
+                    <i class="rtoption fa fa-arrow-left"></i>
+                    <span class="rt-label rtoption">Back</span>
+                </li>
+                <li class="rt-item rtoption" onclick="history.forward()">
+                    <i class="rtoption fa-solid fa-arrow-right"></i>
+                    <span class="rt-label rtoption">Forward</span>
+                </li>
+                <li class="rt-item rtoption" onclick="location.reload()">
+                    <i class="rtoption fa-solid fa-rotate-right"></i>
+                    <span class="rt-label rtoption">Reload</span>
+                </li>
+                <li class="rt-item rtoption">
+                    <i class="rtoption fa-solid fa-bookmark"></i>
+                    <span class="rt-label rtoption">Save to list</span>
+                </li>
+                <li class="rt-item rtoption">
+                    <i class="rtoption fa-solid fa-backward"></i>
+                    <span class="rt-label rtoption">Previous Episode</span>
+                </li>
+                <li class="rt-item rtoption">
+                    <i class="rtoption fa-solid fa-forward"></i>
+                    <span class="rt-label rtoption">Next Episode</span>
+                </li>
+                <li class="rt-item rtoption">
+                    <i class="rtoption fa-solid fa-lightbulb"></i>
+                    <span class="rt-label rtoption">Focus</span>
+                </li>
+                <li class="rt-item rtoption">
+                    <i class="rtoption fa-solid fa-bookmark"></i>
+                    <span class="rt-label rtoption">Save to list</span>
+                </li>
+                <li class="rt-item rtoption">
+                    <i class="rtoption fa-solid fa-copy"></i>
+                    <span class="rt-label rtoption">Copy Link Address</span>
+                </li>
+                <li class="rt-item rtoption">
+                    <i class="rtoption fa-solid fa-table-columns"></i>
+                    <span class="rt-label rtoption">Open link in new tab</span>
+                </li>
+            </div>
+        </div>
+    </div>
+    save link as copy link address Expand
+    <script>
+        const rtOption = document.querySelector("#rtoption");
+
+        window.addEventListener("contextmenu", e => {
+            e.preventDefault();
+            let x = e.offsetX,
+                y = e.offsetY,
+                winWidth = window.innerWidth,
+                winHeight = window.innerHeight,
+                cmWidth = rtOption.offsetWidth,
+                cmHeight = rtOption.offsetHeight;
+
+            if (!e.target.classList.contains('rt-item') && !e.target.classList.contains('rtoption')) {
+                x = x > winWidth - cmWidth ? winWidth - cmWidth - 5 : x;
+                console.log("hi")
+                y = y > winHeight - cmHeight ? winHeight - cmHeight - 5 : y;
+                rtOption.style.left = `${x}px`;
+                rtOption.style.top = `${y}px`;
+                rtOption.style.visibility = "visible";
+            }
+
+
+        });
+
+        document.addEventListener("click", () => rtOption.style.visibility = "hidden");
+    </script>
+</body>
+
+</html>

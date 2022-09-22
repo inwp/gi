@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Plyr - HTML5 Video Player Sample</title>
+  <!-- Docs styles -->
+<link rel="stylesheet" href="plyr.min.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="js.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NLYJF7PB3Y');
+</script>
+
+  </head>
+  <body>
+    <video
+          controls
+          crossorigin
+          playsinline
+          data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+          id="player"
+          width="100%"
+        >
+          <!-- Video files -->
+          <source
+            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+            type="video/mp4"
+            size="576"
+          />
+          <source
+            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
+            type="video/mp4"
+            size="720"
+          />
+          <source
+            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+            type="video/mp4"
+            size="1080"
+          />
+
+          <!-- Caption files -->
+          <track
+            kind="captions"
+            label="English"
+            srclang="en"
+            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+            default
+          />
+          <track
+            kind="captions"
+            label="Français"
+            srclang="fr"
+            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt"
+          />
+
+          <!-- Fallback for browsers that don't support the <video> element -->
+          <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+        </video>
+        
+    <script src="plyr.min.js"></script>
+    <script>const player = new Plyr('#player');</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NRW057C9V8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NRW057C9V8');
+</script>
+  </body>
+</html>

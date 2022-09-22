@@ -1,0 +1,7 @@
+type		Facebook		Twitter		Github		GeekforGeek 		Discord
+Nav		#242526		#000101		#0d1116		#232220			#212224
+search	#3a3b3c		#000101		#010409		#2b2a2c			#18181d
+body		#18181b		#000101		#010409		#131417			#36393f
+main-la	#242526		#16181c		#0d1116		#222321			#2f3137
+text		#e5e7eb		#d6d8da		#b0bac4		#fefffe			#fefeff
+total	#2375e1		#1d9af0		#238637		#03a565			#109ef0

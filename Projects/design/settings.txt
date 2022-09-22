@@ -1,0 +1,32 @@
+Settings
+------------------------------------------------------------------
+Show continue watching in home page <on /off>
+Anime name < English/Japanese >
+Anime Audio < Any/Subbed/Dubbed >
+Episode list style < Card/Name/Number >
+Auto play
+Auto next
+Skip seconds <10>
+Text font size <0.5x-3x>
+Keybord shortcuts < on/off >
+THeme <Dark /Light/ Auto>
+
+******************************************************************
+More Settings
+------------------------------------------------------------------
+Auto load comments
+Watch list per page <30>
+Show search suggestation <On /Off>
+Notification ignore folders <Watching/On-Hold/Planned/Watched/Dropped
+Notification ignore language <None/Subbed/Dubbed>
+Load comment on click <On /Off>
+
+******************************************************************
+Beta Settings
+------------------------------------------------------------------
+Show trilor in hover anime <On /Off/For Upcomming only>
+Show slide bar <On /On click/ On hover>
+Auto skip intro, outro
+Anime list style <List /Card/Middium list>
+Results in home page < <-> >
+Help <>
